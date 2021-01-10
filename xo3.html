@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <style>
+    body{
+      transition: all 1s ease;
+      text-align: center;
+      margin-top: 100px;
+    }
+    table{
+      margin:auto; 
+    }
+    te , td {
+      border : none;
+      min-width: 45px;
+      height: 45px;
+      font-size: 1.8rem;
+      background-color: rgb(228, 94, 94);
+      color: white;
+    }
+    td:hover{
+      cursor: pointer;
+      border: solid 1px;
+      border-color: rgb(92, 30, 1);
+    }
+  
+    .click{
+      background-color: rgb(170, 170, 170);
+    }
+
+    .done{
+      opacity: 0.5;
+    }
+
+    button{
+      padding: 5px 20px;
+      font-size: 1.2em;
+      color: white;
+      background-color:rgb(228, 94, 94);
+      border: solid 1px rgb(228, 94, 94);
+      cursor: pointer;
+      display: none;
+      margin: auto;
+    }
+    
+  </style>
+</head>
+<body>
+  <h3>Select X - O Size</h3>
+  <h3><a href="xo3.html">3x3</a></h3>
+  <h3><a href="xo4.html">4x4</a></h3>
+  <h3><a href="xo5.html">5x5</a></h3>
+
+
+<br>
+  <label>Select Background Color: </label>
+  <select onchange="color(this.value)">
+    <option vlaue="white">White</option>
+    <option vlaue="blue">Blue</option>
+    <option vlaue="green">Green</option>
+    <option vlaue="red">Red</option>
+    <option vlaue="pink">pink</option>
+    <option vlaue="cyan">cyan</option>
+
+</select>
+
+<br>
+<br>
+
+<label>Select X - O Color: </label>
+<select onchange="colorXO(this.value)">
+  <option vlaue="white">White</option>
+  <option vlaue="blue">Blue</option>
+  <option vlaue="green">Green</option>
+  <option vlaue="red">Red</option>
+  <option vlaue="pink">pink</option>
+  <option vlaue="cyan">cyan</option>
+
+</select>
+
+
+<h4>Player 1 : <span id="p1V"></span></h4>
+<h4>Player 2 : <span id="p2V"></span></h4>
+<table id="table">
+  <tr>
+    <td onclick="clickTd('0')" id='0'></td>
+    <td onclick="clickTd('1')" id='1'></td>
+    <td onclick="clickTd('2')" id='2'></td>
+  </tr>
+
+  <tr>
+    <td onclick="clickTd('3')" id='3'></td>
+    <td onclick="clickTd('4')" id='4'></td>
+    <td onclick="clickTd('5')" id='5'></td>
+  </tr>
+
+  <tr>
+    <td onclick="clickTd('6')" id='6'></td>
+    <td onclick="clickTd('7')" id='7'></td>
+    <td onclick="clickTd('8')" id='8'></td>
+  </tr>
+
+
+</table>
+
+<h3 id="labe"></h3>
+
+<button id="reload" onclick="window.location.reload()">Play Again!</button>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="jxo3.js"></script>
+
+</body>
+</html>
